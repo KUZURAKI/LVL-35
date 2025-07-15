@@ -1,0 +1,121 @@
+// ОБЫЧНО В ЭТОМ ФАЙЛЕ Я ПИШИ HEADER + FOOTER, ЧТОБЫ КАК БЫ СРАЗУ ОБЪЕДЕНИТЬ
+// ЭТИ 2 КОМПОНЕНТА
+
+.container {
+  display: flex;
+  max-width: 1500px;
+  margin: auto;
+  align-items: center;
+  justify-content: space-between;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+header {
+  background-color: rgba(255, 255, 255, 0.031);
+  backdrop-filter: blur(10px);
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+
+  .linkItems {
+    display: flex;
+    gap: 10px;
+  }
+
+  .loginButton {
+    display: flex;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+  }
+
+  .hrHeight {
+    display: flex;
+    margin: auto;
+    border: none;
+    width: 1px;
+    height: 30px;
+    background-color: #313131;
+  }
+
+  .themeButton {
+    background-color: transparent;
+    border: none;
+    transition: 0.3s ease-out;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+  }
+
+  .hrWidth {
+    height: 1px;
+    border: none;
+    background-color: #313131;
+  }
+}
+
+footer {
+  background-color: black;
+  padding-top: 50px;
+
+  .hrWidth {
+    height: 1px;
+    border: none;
+    background-color: #313131;
+    width: 50%;
+    margin: auto;
+    margin-bottom: 50px;
+  }
+
+  .contant {
+    display: flex;
+    width: 25%;
+    margin: auto;
+    gap: 24px;
+    align-items: center;
+    justify-content: center;
+
+    &Left,
+    &Right {
+      width: 40%;
+    }
+
+    &Left {
+      display: flex;
+      gap: 7px;
+      align-items: center;
+      justify-content: center;
+
+      p {
+        color: white;
+      }
+
+      video {
+        width: 30px;
+        height: 30px;
+      }
+    }
+
+    &Right {
+      position: relative;
+
+      img {
+        width: 150px;
+        border-radius: 10px;
+      }
+
+      &::before {
+        content: "";
+        position: absolute;
+        width: 50px;
+        height: 50px;
+        background-image: url("official.png");
+        background-repeat: no-repeat;
+        background-size: cover;
+        top: -10%;
+        left: 90%;
+        transform: rotate(25deg);
+      }
+    }
+  }
+}
