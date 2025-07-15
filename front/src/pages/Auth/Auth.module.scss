@@ -1,0 +1,245 @@
+span {
+  color: gold;
+}
+
+.modalOverlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.modal {
+  padding: 20px;
+  border-radius: 8px;
+  max-width: 600px;
+  width: 100%;
+  height: 100%;
+  overflow-y: auto;
+  scrollbar-width: none;
+  position: relative;
+}
+
+.closeButton {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background: none;
+  border: none;
+  font-size: 2.2rem;
+  cursor: pointer;
+}
+
+.formInfo {
+  border-radius: 20px;
+  max-width: 600px;
+  margin: auto;
+  margin-top: 30px;
+  padding: 15px 5px;
+  position: relative;
+  background-color: var(--form-background-color);
+  box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.078);
+  transition: var(--transition);
+
+  .container {
+    width: 90%;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+
+    fieldset {
+      padding: 0;
+      border: 1px solid var(--icon-color);
+      border-radius: 5px;
+      font-weight: 500;
+      transition: 0.2s ease-in-out;
+
+      &:hover {
+        background-color: var(--background-color);
+      }
+
+      &:focus-within {
+        border: 1px solid gold;
+      }
+
+      // &.invalid {
+      //   border: 1px solid red;
+      // }
+    }
+
+    legend {
+      margin-left: 15px;
+      padding-inline: 8px;
+      color: var(--text-color);
+    }
+
+    input {
+      width: 100%;
+      height: 40px;
+      border: none;
+      background-color: transparent;
+      padding: 0 15px;
+      font-size: 1rem;
+      color: var(--text-color);
+
+      &:focus {
+        outline: 0;
+      }
+
+      &[type="tel"] {
+        font-family: monospace;
+      }
+    }
+
+    .passwordField {
+      position: relative;
+
+      input {
+        padding-right: 35px;
+        width: 100%;
+      }
+
+      .togglePassword {
+        position: absolute;
+        right: 10px;
+        top: 50%;
+        transform: translateY(-50%);
+        cursor: pointer;
+        user-select: none;
+        font-size: 1.2rem;
+
+        img {
+          width: 20px;
+        }
+      }
+    }
+
+    textarea {
+      width: 100%;
+      height: 150px;
+      background-color: transparent;
+      border: none;
+      padding: 12px;
+      transition: 0.2s ease-in-out;
+      font-size: 1rem;
+      color: var(--text-color);
+
+      &:focus {
+        outline: 0;
+      }
+    }
+
+    button {
+      background-color: var(--text-color);
+      color: var(--form-background-color);
+      border: 1px solid transparent;
+      height: 45px;
+      border-radius: 10px;
+      cursor: pointer;
+      transition: 0.2s ease-in-out;
+      font-size: 1rem;
+
+      &:hover:not(:disabled) {
+        background-color: transparent;
+        color: var(--text-color);
+        border: 1px solid var(--text-color);
+      }
+
+      &:disabled {
+        background-color: rgba(0, 0, 0, 0.214);
+        cursor: not-allowed;
+        color: var(--text-color);
+        border: 1px solid transparent;
+      }
+    }
+
+    .dropZone {
+      padding: 20px;
+      text-align: center;
+      cursor: pointer;
+      border-radius: 5px;
+      transition: background-color 0.3s ease;
+
+      p {
+        margin: 0;
+        color: var(--text-color);
+        font-size: 0.9rem;
+      }
+    }
+
+    .success {
+      color: green;
+      text-align: center;
+      font-weight: 500;
+    }
+
+    .error {
+      color: red;
+      text-align: center;
+      font-weight: 500;
+    }
+
+    .passwordRequirements {
+      font-size: 0.9rem;
+      color: var(--text-color);
+
+      p {
+        margin: 0 0 5px;
+        font-weight: 500;
+      }
+
+      ul {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+      }
+
+      li {
+        display: flex;
+        align-items: center;
+        gap: 5px;
+        margin-bottom: 5px;
+      }
+
+      .valid {
+        color: green;
+      }
+
+      .invalid {
+        color: red;
+      }
+
+      .requirementIcon {
+        font-size: 1rem;
+      }
+    }
+
+    .charCounter {
+      font-size: 0.8rem;
+      color: #666;
+      text-align: right;
+    }
+
+    .avatarPreviewContainer {
+      margin-top: 10px;
+      text-align: center;
+    }
+
+    .avatarPreview {
+      max-width: 100px;
+      max-height: 100px;
+      object-fit: cover;
+    }
+  }
+}
+
+.textInfo {
+  text-align: center;
+}
