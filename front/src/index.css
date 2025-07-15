@@ -1,0 +1,48 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
+@import "tailwindcss";
+
+:root {
+  --background-color: #0e0e0e;
+  --text-color: #ffffff;
+  --icon-color: rgba(255, 255, 255, 0.689);
+  --icon-color-hover: #ffffff;
+  --transition: 0.3s ease-out;
+  --border: 1px solid #313131;
+  --form-background-color: rgb(24, 24, 24);
+}
+
+.light {
+  --background-color: #f9fafb;
+  --text-color: #000000;
+  --icon-color: rgba(0, 0, 0, 0.568);
+  --icon-color-hover: black;
+  --transition: 0.3s ease-out;
+  --form-background-color: #ffffff;
+}
+
+.icon {
+  width: 45px;
+  height: 45px;
+  transition: 0.3s ease-out;
+  color: var(--icon-color);
+  padding: 10px;
+
+  &:hover {
+    color: var(--icon-color-hover);
+  }
+}
+
+button {
+  border: 1px solid transparent;
+  color: var(--text-color);
+  background-color: var(--background-color);
+  cursor: pointer;
+}
+
+body {
+  background-color: var(--background-color);
+  color: var(--text-color);
+  font-family: "Montserrat", sans-serif;
+  transition: 0.3s ease-out;
+  font-size: 18px;
+}
